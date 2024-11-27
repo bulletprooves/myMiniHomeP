@@ -1,0 +1,157 @@
+/**** 헤더, 글씨 크게 ****/
+header {
+    color: #ffffff;
+    /*padding-left: 10rem;
+    padding-right: 10rem;*/
+}
+
+
+/**** 바디, 한글 폰트 추가할까? ****/
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #000000;
+    color: #404040;
+}
+
+
+/**** 푸터, 내 거임을 표시 ****/
+footer {
+    background-color: #333333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    background-attachment: local;
+    /* width: 100%; */
+}
+
+/* 상단 여백 생기는 개짜증나는 현상 해결 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/**** 네비게이션 ****/
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #5b93d3;
+    padding: 0.5rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+nav a:hover {
+    background-color: #cfe0ff;
+}
+
+
+/**** 컨텐츠 ****/
+.whosTheDavid {
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 2rem 0;
+}
+
+.project {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+}
+
+.contact-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-list li {
+    margin-bottom: 10px;
+}
+
+.contact-list a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.contact-list a:hover {
+    text-decoration: underline;
+}
+
+
+/**** 글자 강조 및 효과 등등 ****/
+.accent {
+    font-size: 150%;
+    font-weight: 800;
+}
+.semi_accent {
+    font-size: 130%;
+    font-weight: 600;
+}
+
+
+/**** 배경 고정 css 및 배경 이미지 사이즈 ****/
+/* 아래 bg로 스타일리쉬하게 */
+.bg {
+    height: 100rem; /* 100vh 또는 100vw 가 현재 스크린 사이즈 임 */
+    background-position: center top;
+    background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+.bg_whosTheDavid {
+    background-image: url("../images/sky_moon.jpg");
+    background-size: 100% 100%;
+    /*line-height: 35rem;*/
+    text-shadow: #000000 1px 1px 4px;
+    /* background-color: #f4f4f4; */
+}
+.bg_type2 {
+    background-image: url('https://picsum.photos/id/80/2000/2000');
+}
+.bg_type3 {
+    background-image: url('https://picsum.photos/id/81/2000/2000');
+    background-attachment: local;
+}
+
+/* 컨테이너 */
+.container {
+    background-color: #faf9f9;
+    /* width: 80%; */
+    margin: auto;
+    overflow: hidden;
+    text-align: center;
+    padding: 0rem;
+}
+.containerContact {
+    background-color: #33383960;
+    /* width: 80%; */
+    margin: auto;
+    overflow: hidden;
+    text-align: center;
+    color: #ffffff;
+    padding: 0rem;
+}
+.containerWhosTheDavid {
+    text-align: center;
+    vertical-align: middle;
+}
