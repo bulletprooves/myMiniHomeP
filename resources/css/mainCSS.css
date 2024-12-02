@@ -1,25 +1,42 @@
+
+@media (max-width: 768px) {
+    .contact-section {
+        flex: 1 1 100%; /* 한 줄에 하나씩 배치 */
+    }
+}
+
+/* 상단 여백 생기는 개짜증나는 현상 해결 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
 /**** 헤더, 글씨 크게 ****/
 header {
     color: #ffffff;
     /*padding-left: 10rem;
     padding-right: 10rem;*/
 }
-
+.container-header {
+    text-align: center;
+    padding-top: 30rem;
+    padding-bottom: 30rem;
+}
+.bg_header {
+    height: 90rem; /* 100vh 또는 100vw 가 현재 스크린 사이즈 임 */
+    background-image: url("../images/sky_moon.jpg");
+    line-height: 5rem;
+    text-shadow: #000000 1px 1px 4px;
+}
 
 /**** 바디, 한글 폰트 추가할까? ****/
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-color: #000000;
-    color: #404040;
+    color: #1c1c1c;
 }
 
-
-/**** 푸터, 내 거임을 표시 ****/
+/**** 푸터, 추가 정보 기입 ****/
 footer {
     background-color: #333333;
     color: #fff;
@@ -31,12 +48,6 @@ footer {
     /* width: 100%; */
 }
 
-/* 상단 여백 생기는 개짜증나는 현상 해결 */
-* {
-    margin: 0;
-    padding: 0;
-}
-
 
 /**** 네비게이션 ****/
 nav {
@@ -45,60 +56,50 @@ nav {
     background-color: #5b93d3;
     padding: 0.5rem;
 }
-
 nav a {
     color: #fff;
     text-decoration: none;
     padding: 0.5rem 1rem;
 }
-
 nav a:hover {
     background-color: #cfe0ff;
 }
 
 
-/**** 컨텐츠 ****/
-.whosTheDavid {
+/**** 아이프레임 배경 비디오 ****/
+.video_bg {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
 }
-
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
-    padding: 2rem 0;
+.video_bg iframe {
+    align-items: center;
+    position: absolute;
+    top: -60px;
+    bottom: -60px;
+    left: 0;
+    width: 120%;
+    height: 120%;/*calc(100% + 120px);*/
+    border: none;
 }
-
-.project {
-    border: 1px solid #ddd;
-    padding: 1rem;
-    text-align: center;
-}
-
-.project img {
-    max-width: 100%;
-    height: auto;
-}
-
-.contact-list {
-    list-style-type: none;
-    padding: 0;
-}
-
-.contact-list li {
-    margin-bottom: 10px;
-}
-
-.contact-list a {
-    color: #0066cc;
-    text-decoration: none;
-}
-
-.contact-list a:hover {
-    text-decoration: underline;
+/* 비디오 위에 올려 클릭 방지 */
+.video_bg::after {
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* z축으로 다르게해서 클릭방지 */
 }
 
 
 /**** 글자 강조 및 효과 등등 ****/
+.big_accent {
+    font-size: 250%;
+    font-weight: 1000;
+}
 .accent {
     font-size: 150%;
     font-weight: 800;
@@ -107,26 +108,51 @@ nav a:hover {
     font-size: 130%;
     font-weight: 600;
 }
+.text_huge_shadow {
+    font-size: 300%;
+    font-weight: 1000;
+    text-shadow: #000000 1px 1px 4px;
+}
+.text_center {
+    text-align: center;
+    line-height: 3;
+}
+.text_white {
+    color: #faf9f9;
+}
+.text_whiteGray {
+    color: #afafaf;
+}
+.bg_black {
+    background: #000;
+}
 
 
 /**** 배경 고정 css 및 배경 이미지 사이즈 ****/
 /* 아래 bg로 스타일리쉬하게 */
 .bg {
-    height: 100rem; /* 100vh 또는 100vw 가 현재 스크린 사이즈 임 */
     background-position: center top;
     background-size: cover;
     background-repeat: repeat;
     background-attachment: fixed;
 }
-.bg_whosTheDavid {
-    background-image: url("../images/sky_moon.jpg");
-    background-size: 100% 100%;
-    /*line-height: 35rem;*/
-    text-shadow: #000000 1px 1px 4px;
-    /* background-color: #f4f4f4; */
+.bg_contact {
+    height: 40rem;
+    background-image: url('../images/snowgirl.jpg');
+    margin: auto;
+    overflow: hidden;
+    text-align: center;
+    color: #ffffff;
+    padding: 5rem;
 }
-.bg_type2 {
-    background-image: url('https://picsum.photos/id/80/2000/2000');
+.bg_projects {
+    height: 90rem;
+    background-image: url('../images/road_sunset_pink_portrait.jpg');
+    margin: auto;
+    overflow: auto;
+    text-align: center;
+    color: #ffffff;
+    padding: 5rem;
 }
 .bg_type3 {
     background-image: url('https://picsum.photos/id/81/2000/2000');
@@ -136,22 +162,201 @@ nav a:hover {
 /* 컨테이너 */
 .container {
     background-color: #faf9f9;
-    /* width: 80%; */
     margin: auto;
     overflow: hidden;
     text-align: center;
     padding: 0rem;
 }
-.containerContact {
-    background-color: #33383960;
-    /* width: 80%; */
-    margin: auto;
-    overflow: hidden;
-    text-align: center;
-    color: #ffffff;
-    padding: 0rem;
+
+/**** 동근's 갤러리 ****/
+/* 갤러리는 내 작품 이미지 넣을 */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-section {
+        flex: 1 1 100%;
+    }
 }
-.containerWhosTheDavid {
+/* 섹션 스타일 */
+#gallery {
+    padding: 2rem;
+    background: #000000;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+.gallery {
+    padding-bottom: 10rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2열 */
+    grid-template-rows: repeat(2, 1fr); /* 2행 */
+    gap: 0; /* 이미지 간 여백 제거 */
+    width: 100%; /* 섹션 너비에 맞춤 */
+    max-width: 100rem; /* 최대 너비 설정 */
+    box-sizing: border-box; /* 크기 계산에 패딩 포함 */
+}
+/* 갤러리 아이템 스타일 */
+.gallery-item {
+    position: relative;
+    width: 100%; /* 셀 너비에 맞춤 */
+    aspect-ratio: 4 / 3; /* 4:3 래티오 */
+    overflow: hidden; /* 아이템 내부 넘치는 부분 숨김 */
+}
+/* 정적인 이미지 */
+.static-image, .hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 비율 유지하며 채움 */
+    transition: opacity 0.3s ease; /* 부드러운 전환 */
+}
+/* GIF는 기본적으로 숨김 */
+.hover-image {
+    opacity: 0;
+}
+/* 호버 시 GIF 나타나기 */
+.gallery-item:hover .hover-image {
+    opacity: 1;
+}
+.gallery-item:hover .static-image {
+    opacity: 0;
+}
+
+
+
+
+/**** 컨택트 ****/
+.contact-list {
+    list-style-type: none;
+    padding: 0;
+}
+.contact-list li {
+    margin-bottom: 10px;
+}
+.contact-list a {
+    color: #0066cc;
+    text-decoration: none;
+}
+.contact-list a:hover {
+    text-decoration: underline;
+}
+.about-content {
+    display: flex; /* 이미지와 텍스트를 가로로 배치 */
+    align-items: center; /* 이미지와 텍스트의 세로 중심 맞춤 */
+    gap: 2rem; /* 이미지와 텍스트 사이 간격 */
+    text-align: left; /* 텍스트는 왼쪽 정렬 */
+    justify-content: center; /* 콘텐츠를 가운데 정렬 */
+}
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin: 0 auto; /* 중앙 정렬 */
+    display: block; /* 블록 요소로 설정 */
+    object-fit: cover;
+}
+
+
+/**** 컨택트 섹션 분할 ****/
+.contact-section {
+    flex: 1 1 calc(33.33% - 1rem); /* 3분할 */
+    background-color: #ffffff; /* 배경색 예시 */
+    transition: opacity 0.3s ease; /* 부드러운 전환 효과 */
+    color: #1c1c1c;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+.contact-sections {
+    display: flex;
+    flex-wrap: wrap; /* 화면 크기에 따라 줄바꿈 가능 */
+    justify-content: space-between; /* 섹션 간 간격 조정 */
+    gap: 1rem; /* 섹션 간 여백 */
+    margin: 2rem 0; /* 상하 간격 */
+}
+.contact-section:hover {
+    opacity: 0.6125; /* 반투명 효과 */
+}
+.contact-section h3 {
+    height: 5rem;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #1e1e1e;
+}
+.contact-list {
+    list-style: none;
+    padding: 0;
+}
+.contact-list li {
+    margin-bottom: 0.5rem;
+}
+.contact-list a { /* 링크 색깔 */
+    color: #00bfff; /* 링크 색상 */
+    text-decoration: none;
+}
+.contact-list a:hover {
+    text-decoration: underline;
+}
+
+
+/**** 프로젝트 ****/
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 5rem 5rem;
+    background-color: #ffffff2c; /* 배경색 추가 */
+    border-radius: 10px; /* 모서리 둥글게 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 부드러운 그림자 */
+}
+.project {
+    border: 1px solid #ddd;
+    padding: 1rem;
     text-align: center;
-    vertical-align: middle;
+    background-color: #fff; /* 카드 배경색 */
+    border-radius: 8px; /* 카드 모서리 둥글게 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 카드 그림자 */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* 호버 효과 */
+}
+.project:hover {
+    transform: translateY(-5px); /* 살짝 위로 올라오는 효과 */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* 더 강한 그림자 */
+}
+.project img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px; /* 이미지 모서리 둥글게 */
+    margin-bottom: 1rem;
+    transition: transform 0.2s ease; /* 이미지 확대 효과 */
+}
+.project img:hover {
+    transform: scale(1.05); /* 이미지 확대 */
+}
+.project a {
+    text-decoration: none; /* 링크 밑줄 제거 */
+    color: inherit; /* 부모 색상 상속 */
+}
+.project h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+    color: #333;
+}
+.project p {
+    font-size: 1rem;
+    color: #666;
 }
