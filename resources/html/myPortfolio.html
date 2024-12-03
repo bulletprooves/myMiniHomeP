@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html lang="ko">
-<!-- 감히 동근님의 소스코드를 열어보다니...
- 네놈 머리 속에는 마구니가 가득하구나
- 내 손으로 때려 죽여야겠노라 ୧(๑•̀ᗝ•́)૭ -->
+<!-- 
+감히 동근님의 소스코드를 열어보다니...
+네놈 머리 속에는 마구니가 가득하구나
+내 손으로 때려 죽여야겠노라 ୧(๑•̀ᗝ•́)૭
+
+* GIF files must 25mb 보다 작아야 함. (깃헙데탑으로 하면 초과해도 괜팒은 듯?)
+* 요소 순서랑 UI 배치 재검토해야 함.
+* 각각의 프로젝트 html 파일 이동하는 걸로.
+-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,14 +19,11 @@
 <body>
     <!-- 페이지 헤더 : 동근, 게임 개발자 -->
     <header>
-        <div class="video_bg">
-            <iframe src="https://www.youtube.com/embed/-q6-DGulbnk?autoplay=1&mute=1&loop=1&playlist=-q6-DGulbnk"></iframe>
-        </div>
         <section id="about" class="bg bg_header">
             <div class="container-header">
-                <p class=""><span class="accent">“ 스케치북</span>에서 <span class="accent">모니터</span>, <span
-                        class="accent">크레파스</span>에서 <span class="accent">키보드</span>로 <span class="accent">”</span></p>
-                <p>함께 웃고 즐길 소소한 <span class="semi_accent">추억</span>이 담긴 게임을 개발 하고픈 <span class="semi_accent">감동근</span>(David_동근) 입니다.</p>
+                <h1 class=""><span class="accent">“ 스케치북</span>에서 <span class="accent">모니터</span>, <span
+                        class="accent">크레파스</span>에서 <span class="accent">키보드</span>로 <span class="accent">”</span></h1>
+                <h3>함께 웃고 즐길 소소한 <span class="semi_accent">추억</span>이 담긴 게임을 개발 하고픈 <span class="semi_accent">감동근</span>(David_동근) 입니다.</h3>
                 <!--p><span class="semi_accent">Hi, There!</span> I'm 동근 who wanna make games that will be
                     <span class="semi_accent">a precious memory</span> for everybody!
                 </p--> <!-- for both developers and players. -->
@@ -29,15 +32,30 @@
         <!--h1>동근 감 (David_동근)</h1>
         <h3>Game Developer</h3-->
     </header>
+
     <!-- 네비게이션 바로가기 -->
-    <!--nav>
-        <a href="#about">About</a>
+    <nav>
+        <a href="#about">Top</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">About Me & Contact</a>
         <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav-->
+    </nav>
+    
+    <section>
+    <div class="video-container">
+        <div class="video-bg">
+            <iframe 
+                src="https://www.youtube.com/embed/-q6-DGulbnk?autoplay=1&mute=1&loop=1&playlist=-q6-DGulbnk" 
+                allowfullscreen>
+            </iframe>
+        </div>
+        <p class="video-caption">편하게 감상하실 수 있도록 직접 만든 ASMR 영상을 준비했어요.</p>
+        <p class="video-caption">( 볼륨을 올려 따뜻한 모닥불 소리를 들을 수 있답니다. )</p>
+    </div>
+    </section>
 
     <section class="bg_black">
-        <p class="text_center text_white"><span class="big_accent">Preview Gallery</span></p>
+        <p class="text_center text_white"><span class="big_accent neon">Preview Gallery</span></p>
         <p class="text_center text_white semi_accent">
             제 작품들을 살짝 엿볼까요? 🧐<br>
             사진 위로 마우스 🖱️ 를 올려보세요!
@@ -59,8 +77,8 @@
                 <img src="../gifs/RZ_gif.gif" alt="Image 3 Animated" class="hover-image">
             </div>
             <div class="gallery-item">
-                <img src="../images/kyoto_sky.jpg" alt="Image 4" class="static-image">
-                <img src="../images/sharkBoy.gif" alt="Image 4 Animated" class="hover-image">
+                <img src="../images/Astro_jpg.jpg" alt="Image 4" class="static-image">
+                <img src="../gifs/Astro_gif.gif" alt="Image 4 Animated" class="hover-image">
             </div>
         </div>
     </section>
@@ -69,42 +87,63 @@
         <section id="contact" class="bg bg_contact">
             <p class="text_center text_white"><span class="text_huge_shadow">Hello!</span></p>
             <div class="contact-sections">
-                <!-- 첫 번째 섹션 -->
+                <!-- 첫 번째 왼쪽 카드 -->
                 <div class="contact-section">
                     <h3 class="text_center">About Me</h3>
                     <div class="about-content">
                         <img src="../images/me_baby.jpg" alt="My Photo" class="profile-photo">
                         <ul class="contact-list">
-                            <li>Unity 게임 개발</li>
-                            <li>아오 썅 진짜</li>
+                            <li><h3><strong>게임 개발자 / 프로그래머</strong>
+                                <span class="highlight">감동근(David)</span></h3></li>
+                            <li>모바일/PC 플랫폼, 다양한 장르의 게임을 개발하며</li>
+                            <li>새로운 시도를 멈추지 않는 집념의 사나이! 👨‍🔧<!--🦸‍♂️--></li>
+                            <li>사진 속 아기가 어떤 모습으로 자랐을지 궁금하시다면?</li>
+                            <li>👶->👨? 다음 이메일과 연락처로 컨택하여 주십시오.</li>
                         </ul>
                     </div>
                 </div>
-                <!-- 두 번째 섹션 -->
+                <!-- 두 번째 오른쪽 카드 -->
                 <div class="contact-section">
-                    <h3 class="text_center">Email & Phone</h3>
-                    <ul class="contact-list">
-                        <li><strong>- Email:</strong> <a 
-                            href="mailto:dongun1115@gmail.com">dongun1115@gmail.com</a></li>
-                        <li><strong>- Phone:</strong> <a 
-                            href="tel:+821055765234">+82 10-5576-5234</a></li>
-                        <li><strong>- GitHub:</strong> <a 
-                            href="https://github.com/bulletprooves"
-                                target="_blank">github.com/bulletprooves</a></li>
-                        <li><strong>- YouTube:</strong> <a 
-                                href="https://www.youtube.com/@bulletprooves">youtube.com/@bulletprooves</a></li>
-                    </ul>
-                </div>
-                <!-- 세 번째 섹션 -->
-                <div class="contact-section">
-                    <h3></h3>
-                    <p></p>
+                    <h3 class="text_center">Contact</h3>
+                    <div class="about-content">                        
+                        <ul class="contact-list">
+                            <li>
+                                <img src="../images/icons/icon_email.png" alt="Email Icon" class="icon">
+                                <strong>Email:</strong>
+                                <a href="mailto:dongun1115@gmail.com">dongun1115@gmail.com</a>
+                            </li>                            
+                            <li>
+                                <img src="../images/icons/icon_tel.png" alt="Tel Icon" class="icon">
+                                <strong>Phone:</strong> <a 
+                                href="tel:+821055765234">+82 10-5576-5234</a>
+                            </li>
+                            <li>
+                                <img src="../images/icons/icon_github.png" alt="GitHub Icon" class="icon">
+                                <strong>GitHub:</strong> <a 
+                                href="https://github.com/bulletprooves"
+                                    target="_blank">github.com/bulletprooves</a>
+                            </li>
+                            <li>
+                                <img src="../images/icons/icon_youtube.png" alt="YouTube Icon" class="icon">
+                                <strong>YouTube:</strong> <a 
+                                    href="https://www.youtube.com/@bulletprooves">youtube.com/@bulletprooves</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li><span class="highlight">Unity</span>, Blender3D, GitHub, Notion 등을 활용</li>
+                            <li>게임 개발에 사용하는 주력 <span class="highlight">언어는 C#</span></li>
+                            <li>Google PlayStore에 <span class="highlight">출시한 경험</span></li>
+                            <li>Mecanim과 Sprite Editor 2D 애니메이션 작업</li>
+                            <li>로우-폴리 수준의 3D 디자인, YouTube 컨텐츠 능력</li>
+                        </ul>
+                        <p style="color: rgb(86, 86, 86);">자세한 사항은 자기소개서 및 이력서를 확인하여주십시오.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="projects" class="bg bg_projects container">
-            <p class="text_center text_white"><span class="big_accent">Projects</span></p>
+            <p class="text_center text_white padding_5"><span class="big_accent neon">Projects</span></p>
             <div class="projects">
                 
                 <div class="project">
