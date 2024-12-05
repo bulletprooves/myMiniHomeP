@@ -19,6 +19,21 @@
 <body>
     <!-- 페이지 헤더 : 동근, 게임 개발자 -->
     <header>
+        <section>
+            <div class="video_header">
+                <iframe 
+                src="https://www.youtube.com/embed/6c6JIZb5TzY?autoplay=1&mute=1&loop=1&playlist=6c6JIZb5TzY" 
+                allowfullscreen>
+            </iframe>
+            </div>            
+        </section>
+        <!-- 네비게이션 바로가기 -->
+        <nav>
+            <a href="#about">Top</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">About Me & Contact</a>
+            <a href="#projects">Projects</a>
+        </nav>
         <section id="about" class="bg bg_header">
             <div class="container-header">
                 <h1 class=""><span class="accent">“ 스케치북</span>에서 <span class="accent">모니터</span>, <span
@@ -32,14 +47,6 @@
         <!--h1>동근 감 (David_동근)</h1>
         <h3>Game Developer</h3-->
     </header>
-
-    <!-- 네비게이션 바로가기 -->
-    <nav>
-        <a href="#about">Top</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">About Me & Contact</a>
-        <a href="#projects">Projects</a>
-    </nav>
     
     <section>
     <div class="video-container">
@@ -80,6 +87,11 @@
                 <img src="../images/Astro_jpg.jpg" alt="Image 4" class="static-image">
                 <img src="../gifs/Astro_gif.gif" alt="Image 4 Animated" class="hover-image">
             </div>
+            <div class="gallery-item">
+                <img src="../images/John_jpg.jpg" alt="Image 4" class="static-image">
+                <img src="../gifs/John_gif.gif" alt="Image 4 Animated" class="hover-image">
+            </div>
+            
         </div>
     </section>
 
@@ -146,43 +158,48 @@
             <p class="text_center text_white padding_5"><span class="big_accent neon">Projects</span></p>
             <div class="projects">
                 
-                <div class="project">
-                    <a href="project1.html">
+                <div class="project_RZ">
+                    <a href="project_RZ.html">
                         <img src="https://via.placeholder.com/300x200" alt="Reinforcement : Zombies">
                         <h3>Reinforcement : Zombies</h3>
-                        <p>Google Play Store 에 출시하였던 게임</p>
+                        <p>Google Play Store 에 출시하였던 게임<br>
+                            좀비들로 부터 생존을 위한 사투</p>
                     </a>
                 </div>
-                <div class="project">
-                    <a href="project2.html">
+                <div class="project_FOAS">
+                    <a href="project_FOAS.html">
                         <img src="https://via.placeholder.com/300x200" alt="FOAS">
                         <h3>FOAS</h3>
                         <p>머신러닝 라이브러리를 탑재한<br>
                             바다 모험 이야기 Far Out At Sea</p>
                     </a>
                 </div>
-                <div class="project">
-                    <a href="project3.html">
+                <div class="project_Astro">
+                    <a href="project_Astro.html">
                         <img src="https://via.placeholder.com/300x200" alt="Project 3">
-                        <h3>Project 3</h3>
-                        <p>여따 뭐 넣지</p>
+                        <h3>Astronaut Platformer</h3>
+                        <p>긴급신호를 받고 출동한 우주 순찰 요원이<br>
+                            마주한 끔직한 진실, 어떻게 헤쳐나갈 것인가?</p>
                     </a>
                 </div>
-                <div class="project">
-                    <a href="project4.html">
+                <div class="project_SMWYCD">
+                    <a href="project_SMWYCD.html">
                         <img src="https://via.placeholder.com/300x200" alt="Project 3">
-                        <h3>Project 3</h3>
-                        <p>여따 뭐 넣지</p>
+                        <h3>SMWYCD</h3>
+                        <p>Show Me What You Can Do<br>
+                            비윤리적 생체 실험에 소모품이된
+                            주인공의 FPS 액션 복수</p>
                     </a>
                 </div>
-                <div class="project">
-                    <a href="project5.html">
+                <div class="project_Green">
+                    <a href="project_Green.html">
                         <img src="https://via.placeholder.com/300x200" alt="Project 3">
-                        <h3>Project 3</h3>
-                        <p>여따 뭐 넣지</p>
+                        <h3>Green Effect</h3>
+                        <p>환경보존 모바일 미니게임!<br>
+                            우리가 버린 쓰레기들의 나비효과</p>
                     </a>
                 </div>
-                <div class="project">
+                <div class="project_John">
                     <a href="project6.html">
                         <img src="https://via.placeholder.com/300x200" alt="Project 3">
                         <h3>Project 3</h3>
@@ -200,7 +217,6 @@
     </footer>
 
     <script>
-        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
