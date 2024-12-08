@@ -128,6 +128,20 @@ nav a:hover {
     margin-top: 1rem;
     line-height: 1.5;
 }
+/**** 아이프레임 배경 비디오-3 ****/
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -418,8 +432,8 @@ nav a:hover {
 
 /* RZ 프로젝트 카드 */
 .project_RZ {
-    width: 320px;
-    height: 400px;
+    width: 20rem; /*320px*/
+    height: 26rem; /*400px*/
     padding: 1rem;
     text-align: center;
     background-color: #ffeebe; /* 카드 배경색 */
@@ -433,8 +447,8 @@ nav a:hover {
 }
 /* FOAS 프로젝트 카드 */
 .project_FOAS {
-    width: 320px;
-    height: 400px;
+    width: 20rem;
+    height: 26rem;
     padding: 1rem;
     text-align: center;
     background-color: #b5e9ff; /* 카드 배경색 */
@@ -448,8 +462,8 @@ nav a:hover {
 }
 /* Astro 프로젝트 카드 */
 .project_Astro {
-    width: 320px;
-    height: 400px;
+    width: 20rem;
+    height: 26rem;
     padding: 1rem;
     text-align: center;
     background-color: #fefefe; /* 카드 배경색 */
@@ -463,8 +477,8 @@ nav a:hover {
 }
 /* SMWYCD 프로젝트 카드 */
 .project_SMWYCD {
-    width: 320px;
-    height: 400px;
+    width: 20rem;
+    height: 26rem;
     padding: 1rem;
     text-align: center;
     background-color: #ffbebe; /* 카드 배경색 */
@@ -478,8 +492,8 @@ nav a:hover {
 }
 /* Green 프로젝트 카드 */
 .project_Green {
-    width: 320px;
-    height: 400px;
+    width: 20rem;
+    height: 26rem;
     padding: 1rem;
     text-align: center;
     background-color: #d6ffbe; /* 카드 배경색 */
@@ -490,4 +504,19 @@ nav a:hover {
 .project_Green:hover {
     transform: translateY(-7px); /* 살짝 위로 올라오는 효과 */
     box-shadow: 0 32px 48px #d6ffbe; /* 더 강한 그림자 */
+}
+/* Green 프로젝트 카드 */
+.project_John {
+    width: 20rem;
+    height: 26rem;
+    padding: 1rem;
+    text-align: center;
+    background-color: #f3cfff; /* 카드 배경색 */
+    border-radius: 8px;
+    box-shadow: 0 16px 24px #d596ff; /* 카드 그림자 */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* 호버 효과 */
+}
+.project_John:hover {
+    transform: translateY(-7px); /* 살짝 위로 올라오는 효과 */
+    box-shadow: 0 32px 48px #f3cfff; /* 더 강한 그림자 */
 }
