@@ -261,9 +261,9 @@ nav a:hover {
     color: #fff;
     animation: neon-flicker 0.75s infinite alternate;
 }
-.neon_sub {
+/*.neon_sub {
     animation: neon-flicker 0.75s infinite alternate;
-}
+}*/
 .highlight {
     background: linear-gradient(#ffea0073 0 100%);
     background-position: 0 calc(100% - 2px);
