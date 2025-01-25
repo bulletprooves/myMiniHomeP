@@ -21,12 +21,6 @@ header {
     padding-top: 30rem;
     padding-bottom: 30rem;
 }
-.bg_header {
-    height: 90rem; /* 100vh 또는 100vw 가 현재 스크린 사이즈 임 */
-    background-image: url("../images/sky_moon.jpg");
-    line-height: 5rem;
-    text-shadow: #000000 1px 1px 4px;
-}
 
 /**** 바디, 한글 폰트 어떻게 추가해야하나? ****/
 body {
@@ -281,8 +275,15 @@ nav a:hover {
     background-repeat: repeat;
     background-attachment: fixed;
 }
+.bg_header {
+    height: 90rem; /* 100vh 또는 100vw 가 현재 스크린 사이즈 임 */
+    /*background-image: url("../images/sky_moon.jpg");*/
+    background-image: url("../images/Pink2Lavender.png");
+    line-height: 5rem;
+    text-shadow: #000000 1px 1px 4px;
+}
 .bg_contact {
-    background-image: url('../images/snowgirl.jpg');
+    /*background-image: url('../images/snowgirl.jpg');*/
     margin: auto;
     overflow: hidden;
     text-align: center;
@@ -290,7 +291,7 @@ nav a:hover {
     padding: 5rem;
 }
 .bg_projects {
-    background-image: url('../images/snow_light.jpg');
+    /*background-image: url('../images/snow_light.jpg');*/
     margin: auto;
     overflow: auto;
     text-align: center;
