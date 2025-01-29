@@ -44,13 +44,14 @@ footer {
 /**** 네비게이션 ****/
 /* 네비게이션에 스트키 효과 줌 */
 .nav {
-    bottom: 0%;
+    top: 0%;
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: #333333;
+    background-color: #000000;
     padding: 1rem;
     position: fixed;
+    z-index: 10;
 }
 .nav a {
     color: #fff;
@@ -217,6 +218,9 @@ footer {
     font-size: 120%;
     font-weight: 600;
 }
+.text_shadow {
+    text-shadow: #000000 1px 1px 4px;
+}
 .text_huge_shadow {
     font-size: 300%;
     font-weight: 1000;
@@ -286,7 +290,7 @@ footer {
 .bg_header {
     height: 90rem; /* 100vh 또는 100vw 가 현재 스크린 사이즈 임 */
     /*background-image: url("../images/sky_moon.jpg");*/
-    background-image: url("../images/Pink2Lavender.png");
+    background-image: url("../images/Mint2Orange.png");
     line-height: 5rem;
     text-shadow: #000000 1px 1px 4px;
 }
@@ -301,7 +305,7 @@ footer {
 }
 .bg_projects {
     /*background-image: url('../images/snow_light.jpg');*/
-    background-image: url("../images/Mint2Orange.png");
+    background-image: url("../images/Pink2Lavender.png");
     margin: auto;
     overflow: auto;
     text-align: center;
@@ -343,7 +347,10 @@ footer {
 /* 섹션 스타일 */
 #gallery {
     padding: 10rem;
-    background: #000000;
+    background-image: url("../images/darkSpotlight.jpg");
+    /*background: #000000;*/
+    flex-direction: column;
+    flex-wrap: wrap;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -479,7 +486,7 @@ footer {
     gap: 2rem;
     padding: 5rem 2rem;
     justify-items: center; /* 수평 가운데 정렬 */
-    background-color: #0000005e; /* 배경색 추가 */
+    background-color: #ffffff24; /* 배경색 추가 */
     border-radius: 10px;
     box-shadow: 0 4px 8px #00000044;
 }

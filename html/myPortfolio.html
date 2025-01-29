@@ -8,6 +8,7 @@
 * 요소 순서랑 UI 배치 재검토해야 함.
 * 각각의 프로젝트 html 파일 이동하는 걸로.
 -->
+
 <head>
     <meta charset="UTF-8">
     <!--meta name="viewport" content="width=device-width, initial-scale=1.0"-->
@@ -18,90 +19,153 @@
 
 <body>
 
-<!-- 페이지 헤더 : 동근, 게임 개발자 -->
-     
-<header>
-    <section>
-        <div class="video_header">
-            <iframe 
-                src="https://www.youtube.com/embed/saJHvceRk5E?autoplay=1&mute=1&loop=1&playlist=saJHvceRk5E" 
-                allowfullscreen>
-            </iframe>
-            <div class="scroll_hint">
-                <span class="scroll_hint_animation">아래로 스크롤</span>
-                <p class="arrow">&gt;&gt;&gt;</p>
-            </div>
-        </div>
-    </section>
-    
-    
-</header>
+    <!-- 페이지 헤더 : 동근, 게임 개발자 -->
 
-    
-    <section class="bg_black">
-        <p class="text_center text_white"><span class="big_accent neon">David_동근</span></p>
-        <!--p class="text_center text_white"><span class="text_huge_shadow">Preview Gallery</span></p-->
-        <!--p class="text_center text_white semi_accent">
-            제 작품들을 살짝 엿볼까요? 🧐
-        </p-->
-        <p class="text_center text_white accent">
-            <span class="mid_accent">🖱️</span> 사진 위로 마우스를 올려보세요!
-        </p>
-        <p class="text_center text_whiteGray accent">
-            <span class="mid_accent">👆</span> (모바일은 사진을 터치해주세요.)
-        </p>
-    </section>
-    <section id="gallery">
-        <div class="gallery">
-            <div class="gallery-item">
-                <img src="../images/FOAS_jpg.jpg" alt="Image 1" class="static-image">
-                <img src="../gifs/FOAS_gif.gif" alt="Image 1 Animated" class="hover-image">
-            </div>
-            <div class="gallery-item">
-                <img src="../images/Astro_jpg.jpg" alt="Image 4" class="static-image">
-                <img src="../gifs/Astro_gif.gif" alt="Image 4 Animated" class="hover-image">
-            </div>
-            <div class="gallery-item">
-                <img src="../images/Green_jpg.jpg" alt="Image 4" class="static-image">
-                <img src="../gifs/Green_gif.gif" alt="Image 4 Animated" class="hover-image">
-            </div>
-            <div class="gallery-item">
-                <img src="../images/SMWYCD_jpg.jpg" alt="Image 2" class="static-image">
-                <img src="../gifs/SMWYCD_gif.gif" alt="Image 2 Animated" class="hover-image">
-            </div>
-            <div class="gallery-item">
-                <img src="../images/RZ_jpg.jpg" alt="Image 3" class="static-image">
-                <img src="../gifs/RZ_gif.gif" alt="Image 3 Animated" class="hover-image">
-            </div>
-            <div class="gallery-item">
-                <img src="../images/John_jpg.jpg" alt="Image 4" class="static-image">
-                <img src="../gifs/John_gif.gif" alt="Image 4 Animated" class="hover-image">
-            </div>
-        </div>
-    </section>
+    <header>
+    </header>
 
-    
-    <section id="about" class="bg bg_header">
-        <div class="container-header">
-            <h1><span class="accent">“ 스케치북</span>에서 <span class="accent">모니터</span>, <span
-                    class="accent">크레파스</span>에서 <span class="accent">키보드</span>로 <span class="accent">”</span></h1>
-            <h3>함께 웃고 즐길 소소한 <span class="semi_accent">추억</span>이 담긴 게임을 개발 하고픈 <span class="semi_accent">동근(David)</span> 입니다.</h3>
-            <!--p><span class="semi_accent">Hi, There!</span> I'm 동근 who wanna make games that will be
-                <span class="semi_accent">a precious memory</span> for everybody!
-            </p--> <!-- for both developers and players. -->
-        </div>
-    </section>
-    <!--h1>동근 (David_동근)</h1>
-    <h3>Game Developer</h3-->
+
+
 
     <main>
         <!-- 네비게이션 바로가기 -->
-    <section class="nav">
-        <a href="#about">Who Am I</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">About Me & Contact</a>
-        <a href="#projects">Projects</a>
-    </section>
+        <section class="nav">
+            <a href="#about">Who Am I</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">About Me & Contact</a>
+            <a href="#projects">Projects</a>
+        </section>
+
+        <section id="gallery" class="bg">
+            <p class="text_center text_white"><span class="big_accent neon">David_동근</span>
+            </p>
+            <!--p class="text_center text_white"><span class="text_huge_shadow">Preview Gallery</span></p-->
+            <!--p class="text_center text_white semi_accent">
+                제 작품들을 살짝 엿볼까요? 🧐
+            </p-->
+            <p class="text_center text_white accent text_shadow">
+                <span class="mid_accent">🖱️</span> 사진 위로 마우스를 올려보세요!
+            </p>
+            <p class="text_center text_white accent text_shadow">
+                <span class="mid_accent">👆</span> (모바일은 사진을 터치해주세요.)
+            </p>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="../images/FOAS_jpg.jpg" alt="Image 1" class="static-image">
+                    <img src="../gifs/FOAS_gif.gif" alt="Image 1 Animated" class="hover-image">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/Astro_jpg.jpg" alt="Image 4" class="static-image">
+                    <img src="../gifs/Astro_gif.gif" alt="Image 4 Animated" class="hover-image">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/Green_jpg.jpg" alt="Image 4" class="static-image">
+                    <img src="../gifs/Green_gif.gif" alt="Image 4 Animated" class="hover-image">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/SMWYCD_jpg.jpg" alt="Image 2" class="static-image">
+                    <img src="../gifs/SMWYCD_gif.gif" alt="Image 2 Animated" class="hover-image">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/RZ_jpg.jpg" alt="Image 3" class="static-image">
+                    <img src="../gifs/RZ_gif.gif" alt="Image 3 Animated" class="hover-image">
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/John_jpg.jpg" alt="Image 4" class="static-image">
+                    <img src="../gifs/John_gif.gif" alt="Image 4 Animated" class="hover-image">
+                </div>
+            </div>
+        </section>
+
+
+        <section>
+            <div class="video_header">
+                <iframe src="https://www.youtube.com/embed/saJHvceRk5E?autoplay=1&mute=1&loop=1&playlist=saJHvceRk5E"
+                    allowfullscreen>
+                </iframe>
+                <div class="scroll_hint">
+                    <span class="scroll_hint_animation">아래로 스크롤</span>
+                    <p class="arrow">&gt;&gt;&gt;</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="about" class="bg bg_header">
+            <div class="container-header">
+                <h1><span class="accent">“ 스케치북</span>에서 <span class="accent">모니터</span>, <span
+                        class="accent">크레파스</span>에서
+                    <span class="accent">키보드</span>로 <span class="accent">”</span>
+                </h1>
+                <h3>함께 웃고 즐길 소소한 <span class="semi_accent">추억</span>이 담긴 게임을 개발 하고픈 <span
+                        class="semi_accent">동근(David)</span> 입니다.</h3>
+                <!--p><span class="semi_accent">Hi, There!</span> I'm 동근 who wanna make games that will be
+                    <span class="semi_accent">a precious memory</span> for everybody!
+                </p--> <!-- for both developers and players. -->
+            </div>
+        </section>
+        <!--h1>동근 (David_동근)</h1>
+        <h3>Game Developer</h3-->
+
+
+            <section id="projects" class="bg bg_projects container">
+                <p class="text_center text_black padding_5"><span class="text_huge_shadow">Projects</span></p>
+                <p class="text_center text_black text_shadow semi_accent">카드를 누르면 프로젝트의 자세한 설명을 확인하실 수 있습니다!</p>
+                <p class="text_center text_black text_shadow semi_accent">(태블릿에서는 아래 메뉴가 올바르게 나타나지 않을 수도 있습니다.)</p>
+                <div class="projects">
+    
+                    <div class="project_RZ">
+                        <a href="project_RZ.html">
+                            <img src="../images/RZ_jpg.jpg" alt="Reinforcement : Zombies">
+                            <h3>Reinforcement : Zombies</h3>
+                            <p>Google Play Store 에 출시하였던 게임<br>
+                                좀비들로 부터 생존을 위한 사투</p>
+                        </a>
+                    </div>
+                    <div class="project_FOAS">
+                        <a href="project_FOAS.html">
+                            <img src="../images/FOAS_jpg.jpg" alt="FOAS">
+                            <h3>FOAS</h3>
+                            <p>머신러닝 라이브러리를 탑재한<br>
+                                바다 모험 이야기 Far Out At Sea</p>
+                        </a>
+                    </div>
+                    <div class="project_Astro">
+                        <a href="project_Astro.html">
+                            <img src="../images/Astro_jpg.jpg" alt="Project 3">
+                            <h3>Astronaut Platformer</h3>
+                            <p>긴급신호를 받고 출동한 우주 순찰 요원이<br>
+                                마주한 끔직한 진실, 어떻게 헤쳐나갈 것인가?</p>
+                        </a>
+                    </div>
+                    <div class="project_SMWYCD">
+                        <a href="project_SMWYCD.html">
+                            <img src="../images/SMWYCD_jpg.jpg" alt="Project 3">
+                            <h3>SMWYCD</h3>
+                            <p>Show Me What You Can Do<br>
+                                비윤리적 생체 실험에 소모품이된
+                                주인공의 FPS 액션 복수</p>
+                        </a>
+                    </div>
+                    <div class="project_Green">
+                        <a href="project_Green.html">
+                            <img src="../images/Green_jpg.jpg" alt="Project 3">
+                            <h3>Green Effect</h3>
+                            <p>환경보존 모바일 미니게임!<br>
+                                우리가 버린 쓰레기들의 나비효과</p>
+                        </a>
+                    </div>
+                    <div class="project_John">
+                        <a href="project6.html">
+                            <img src="../images/John_jpg.jpg" alt="Project 3">
+                            <h3>Project 3</h3>
+                            <p>여따 뭐라 넣지</p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+
         <section id="contact" class="bg bg_contact">
             <p class="text_center text_white"><span class="text_huge_shadow">Hello!</span></p>
             <div class="contact-sections">
@@ -111,8 +175,11 @@
                     <div class="about-content">
                         <img src="../images/me_baby.jpg" alt="My Photo" class="profile-photo">
                         <ul class="contact-list">
-                            <li><h3><strong>게임 개발자 / 프로그래머</strong>
-                                <span class="highlight">Gam(David)동근</span></h3></li>
+                            <li>
+                                <h3><strong>게임 개발자 / 프로그래머</strong>
+                                    <span class="highlight">Gam(David)동근</span>
+                                </h3>
+                            </li>
                             <!--li>종이에 그린 검과 용사, 괴물을 오려내어 ✂️ 방바닥을</li-->
                             <!--li>배경 삼아 전투를 펼치던 아기는 꿈을 갖고 자랐습니다.✨</li-->
                             <li>안녕하세요! </li>
@@ -128,27 +195,25 @@
                 <!-- 두 번째 오른쪽 카드 -->
                 <div class="contact-section">
                     <h3 class="text_center">Contact</h3>
-                    <div class="about-content">                        
+                    <div class="about-content">
                         <ul class="contact-list">
                             <li>
                                 <img src="../images/icons/icon_email.png" alt="Email Icon" class="icon">
                                 <strong>Email:</strong>
                                 <a href="mailto:dongun1115@gmail.com">dongun1115@gmail.com</a>
-                            </li>                            
+                            </li>
                             <li>
                                 <img src="../images/icons/icon_tel.png" alt="Tel Icon" class="icon">
-                                <strong>Phone:</strong> <a 
-                                href="tel:+821055765234">+82 10-5576-5234</a>
+                                <strong>Phone:</strong> <a href="tel:+821055765234">+82 10-5576-5234</a>
                             </li>
                             <li>
                                 <img src="../images/icons/icon_github.png" alt="GitHub Icon" class="icon">
-                                <strong>GitHub:</strong> <a 
-                                href="https://github.com/bulletprooves"
+                                <strong>GitHub:</strong> <a href="https://github.com/bulletprooves"
                                     target="_blank">github.com/bulletprooves</a>
                             </li>
                             <li>
                                 <img src="../images/icons/icon_youtube.png" alt="YouTube Icon" class="icon">
-                                <strong>YouTube:</strong> <a 
+                                <strong>YouTube:</strong> <a
                                     href="https://www.youtube.com/@bulletprooves">youtube.com/@bulletprooves</a>
                             </li>
                         </ul>
@@ -165,75 +230,21 @@
             </div>
         </section>
 
-        <section id="projects" class="bg bg_projects container">
-            <p class="text_center text_black padding_5"><span class="text_huge_shadow">Projects</span></p>
-            <p class="text_center text_black semi_accent">카드를 누르면 프로젝트의 자세한 설명을 확인하실 수 있습니다!</p>
-            <p>(태블릿에서는 아래 메뉴가 올바르게 나타나지 않을 수도 있습니다.)</p>
-            <div class="projects">
-                
-                <div class="project_RZ">
-                    <a href="project_RZ.html">
-                        <img src="../images/RZ_jpg.jpg" alt="Reinforcement : Zombies">
-                        <h3>Reinforcement : Zombies</h3>
-                        <p>Google Play Store 에 출시하였던 게임<br>
-                            좀비들로 부터 생존을 위한 사투</p>
-                    </a>
-                </div>
-                <div class="project_FOAS">
-                    <a href="project_FOAS.html">
-                        <img src="../images/FOAS_jpg.jpg" alt="FOAS">
-                        <h3>FOAS</h3>
-                        <p>머신러닝 라이브러리를 탑재한<br>
-                            바다 모험 이야기 Far Out At Sea</p>
-                    </a>
-                </div>
-                <div class="project_Astro">
-                    <a href="project_Astro.html">
-                        <img src="../images/Astro_jpg.jpg" alt="Project 3">
-                        <h3>Astronaut Platformer</h3>
-                        <p>긴급신호를 받고 출동한 우주 순찰 요원이<br>
-                            마주한 끔직한 진실, 어떻게 헤쳐나갈 것인가?</p>
-                    </a>
-                </div>
-                <div class="project_SMWYCD">
-                    <a href="project_SMWYCD.html">
-                        <img src="../images/SMWYCD_jpg.jpg" alt="Project 3">
-                        <h3>SMWYCD</h3>
-                        <p>Show Me What You Can Do<br>
-                            비윤리적 생체 실험에 소모품이된
-                            주인공의 FPS 액션 복수</p>
-                    </a>
-                </div>
-                <div class="project_Green">
-                    <a href="project_Green.html">
-                        <img src="../images/Green_jpg.jpg" alt="Project 3">
-                        <h3>Green Effect</h3>
-                        <p>환경보존 모바일 미니게임!<br>
-                            우리가 버린 쓰레기들의 나비효과</p>
-                    </a>
-                </div>
-                <div class="project_John">
-                    <a href="project6.html">
-                        <img src="../images/John_jpg.jpg" alt="Project 3">
-                        <h3>Project 3</h3>
-                        <p>여따 뭐라 넣지</p>
-                    </a>
-                </div>
-            </div>
-        </section>
         
+
         <section>
             <div class="video-container">
                 <div class="video-bg" style="padding-bottom: 20rem;">
-                    <iframe 
-                        src="https://www.youtube.com/embed/-q6-DGulbnk?autoplay=1&mute=1&loop=1&playlist=-q6-DGulbnk" 
+                    <iframe
+                        src="https://www.youtube.com/embed/-q6-DGulbnk?autoplay=1&mute=1&loop=1&playlist=-q6-DGulbnk"
                         allowfullscreen>
                     </iframe>
                 </div>
                 <p class="video-caption">편하게 감상하실 수 있도록 직접 만든 ASMR 영상을 준비했어요.
-                    <br>( 볼륨을 올려 따뜻한 모닥불 소리를 들을 수 있답니다. )</p>
+                    <br>( 볼륨을 올려 따뜻한 모닥불 소리를 들을 수 있답니다. )
+                </p>
             </div>
-            </section>
+        </section>
 
     </main>
 
