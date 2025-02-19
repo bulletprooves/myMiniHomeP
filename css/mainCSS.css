@@ -173,8 +173,8 @@ footer {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 90%;
+    width: 0%;
+    height: 0%;
     z-index: 1; /* z축 높여서 영상 클릭되는 거 방지 */
 }
 .video-caption { /* 비디오 아래 텍스트 넣을 거 */
