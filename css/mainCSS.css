@@ -636,7 +636,7 @@ footer {
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    animation: pulse 5s infinite;
+    animation: pulse 6s infinite;
   }
   
   /* 펄스 애니메이션 */
@@ -665,7 +665,7 @@ footer {
     flex-wrap: nowrap;
     justify-content: center;
     width: calc(200%); /* 아이템들을 복제해서 연속 슬라이드를 만듦 */
-    animation: scroll 5s linear infinite;
+    animation: scroll 15s linear infinite;
   }
   
   /* 각 슬라이드 아이템 */
