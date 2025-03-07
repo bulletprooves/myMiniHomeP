@@ -392,12 +392,48 @@ footer {
 .hover-image {
     opacity: 0;
 }
-/* 호버 시 GIF 나타나기 */
 .gallery-item:hover .hover-image {
-    opacity: 1;
+    animation: none; /* 자동 애니메이션 제거 */
+    opacity: 1 !important; /* 강제로 보이게 설정 */
 }
 .gallery-item:hover .static-image {
-    opacity: 0;
+    opacity: 0 !important;
+}
+
+
+/* 자동 애니메이션 적용 */
+.gallery-item .hover-image {
+    /* 기본 opacity는 애니메이션으로 제어 */
+    animation: autoGif 18s infinite;
+}
+
+/* 각 갤러리 아이템마다 3초씩 딜레이 (총 6개 아이템 기준) */
+.gallery-item:nth-child(1) .hover-image {
+    animation-delay: 0s;
+}
+.gallery-item:nth-child(2) .hover-image {
+    animation-delay: 3s;
+}
+.gallery-item:nth-child(3) .hover-image {
+    animation-delay: 6s;
+}
+.gallery-item:nth-child(4) .hover-image {
+    animation-delay: 9s;
+}
+.gallery-item:nth-child(5) .hover-image {
+    animation-delay: 12s;
+}
+.gallery-item:nth-child(6) .hover-image {
+    animation-delay: 15s;
+}
+
+/* keyframes: 18초 주기, 약 3초 동안 gif 표시 (fade in/out 효과 포함) */
+@keyframes autoGif {
+  0% { opacity: 0; }
+  8% { opacity: 1; }    /* 0.08*18s ≈ 1.44초에 fade in 완료 */
+  25% { opacity: 1; }   /* 25% of 18s = 4.5초 → gif가 보이는 시간 약 3.06초 (4.5-1.44) */
+  33% { opacity: 0; }   /* fade out */
+  100% { opacity: 0; }
 }
 
 
