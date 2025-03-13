@@ -1,57 +1,117 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=1280">
-    <link rel="stylesheet" href="../css/mainCSS.css">
-    <title>David_동근</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1280">
+  <title>동근_Astro</title>
+  <link rel="stylesheet" href="../css/subCSS.css">
 </head>
 
 <body>
-    <!-- 페이지 헤더 : 동근, 게임 개발자 -->
-    <header>
-        
-    </header>
-    
-    <section>
-    <div class="video-container">
-        <div class="video-bg">
-            <iframe 
-                src="https://www.youtube.com/embed/-q6-DGulbnk?autoplay=1&mute=1&loop=1&playlist=-q6-DGulbnk" 
-                allowfullscreen>
-            </iframe>
-        </div>
-        <p class="video-caption">편하게 감상하실 수 있도록 직접 만든 ASMR 영상을 준비했어요.</p>
+
+
+  <main>
+    <div class="sidebar">
+      <ul>
+        <li>
+          <a href="myPortfolio.html">
+            <img src="../images/subPages/backButton.jpg">
+          </a>
+        </li>
+        <li>
+          <a href="project_RZ.html">
+            <img src="../images/RZ_jpg.jpg" alt="Rainforcement : Zombies">
+          </a>
+        </li>
+        <li>
+          <a href="project_FOAS.html">
+            <img src="../images/FOAS_jpg.jpg" alt="FOAS">
+          </a>
+        </li>
+        <li>
+          <a href="project_Astro.html">
+            <img src="../images/Astro_jpg.jpg" alt="Astro">
+          </a>
+        </li>
+        <li>
+          <a href="project_SMWYCD.html">
+            <img src="../images/SMWYCD_jpg.jpg" alt="SMWYCD">
+          </a>
+        </li>
+        <li>
+          <a href="project_Green.html">
+            <img src="../images/Green_jpg.jpg" alt="Green">
+          </a>
+        </li>
+        <li>
+          <a href="project_John.html">
+            <img src="../images/John_jpg.jpg" alt="John">
+          </a>
+        </li>
+      </ul>
     </div>
-    </section>
 
-    <section class="bg_black">
-        <p class="text_center text_white"><span class="big_accent neon">Preview Gallery</span></p>
-        <p class="text_center text_white semi_accent">
-            제 작품들을 살짝 엿볼까요? 🧐<br>
-            사진 위로 마우스 🖱️ 를 올려보세요!
+    <header class="page-header" style="background-image: url('../images/John_jpg.jpg');">
+      <div class="header-content">
+        <h1>Far Out At Sea</h1>
+        <p></p>
+      </div>
+    </header>
+    <!-- 섹션 1: 이미지 왼쪽, 텍스트 오른쪽 -->
+    
+    <section class="section">
+      <div class="text">
+        <div class="video-container">
+          <div class="video-bg" style="padding-bottom: 20rem;">
+            <iframe src="https://www.youtube.com/embed/LUwdU0ouFlM?autoplay=1&mute=1&loop=1&playlist=LUwdU0ouFlM"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+      <div class="text">
+        <h2>Far Out At Sea</h2>
+        <p>유저가 그린 그림을 AI가 분석해 세력을 결정하는 턴제 전략 게임입니다.<br>
+            3D 배경과 2D 캐릭터로 애니메이션과 진행 방식을 구현했습니다.
         </p>
-        <p class="text_center text_whiteGray">(모바일은 사진을 터치 해주세요.)</p>
+      </div>
     </section>
 
-    <main>      
+    <section class="section">
+      <div class="image">
+        <img src="../images/subPages/astro01.jpg" alt="Sample Image 1">
+      </div>
+      <div class="text">
+        <h2>섹션 1 제목</h2>
+        <p>8-bit 모노톤 2D 플랫폼 모바일 게임입니다.<br>
+          64×64 단일 색상 스프라이트와 자원 재사용으로 앱 용량을 27MB로 최적화했습니다.
+        </p>
+      </div>
+    </section>
 
-    </main>
+    <!-- 섹션 2: 텍스트 왼쪽, 이미지 오른쪽 -->
+    <section class="section">
+      <div class="image">
+        <img src="../images/subPages/astro02.jpg" alt="Sample Image 2">
+      </div>
+      <div class="text">
+        <h2>섹션 2 제목</h2>
+        <p>이 섹션은 좌측에 텍스트 설명, 우측에 이미지가 배치되어 있습니다.</p>
+      </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2024 Donggeun Gam. All rights reserved.</p>
-    </footer>
-
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    <!-- 섹션 3: 다시 이미지 왼쪽, 텍스트 오른쪽 -->
+    <section class="section">
+      <div class="image">
+        <img src="../images/subPages/astro03.jpg" alt="Sample Image 3">
+      </div>
+      <div class="text">
+        <h2>섹션 3 제목</h2>
+        <p>다시 한 번 좌측에 이미지, 우측에 텍스트 설명이 있는 레이아웃입니다.</p>
+      </div>
+    </section>
+  </main>
 </body>
 
 </html>

@@ -1,0 +1,112 @@
+/* 기본 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-left: 14rem;
+    line-height: 1.6;
+}
+
+/* 좌측 사이드바 고정 */
+.sidebar {
+    position: fixed;   /* 스크롤해도 고정 */
+    top: 0;
+    left: 0;
+    width: 12rem;      /* 필요에 따라 조정 */
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.95); /* 약간 투명한 배경 */
+    overflow-y: auto;  /* 세로 스크롤 허용 */
+    padding: 1rem;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar li {
+    margin-bottom: 1rem;
+  }
+  
+  .sidebar a {
+    display: block;
+  }
+  
+  .sidebar img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+    transition: transform 0.2s ease;
+  }
+  
+  .sidebar img:hover {
+    transform: scale(1.05);
+  }  
+
+.page-header {
+    background-image: url('../images/Astro_jpg.jpg');
+    /* 배경 이미지 경로 */
+    background-size: cover;
+    /* 이미지가 영역 전체를 덮도록 */
+    background-position: center;
+    /* 중앙 정렬 */
+    height: 500px;
+    /* 헤더 영역의 높이 (필요에 따라 조정) */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    /* 텍스트가 잘 보이도록 흰색 */
+    text-align: center;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+}
+
+/* 홀수 섹션: 기본 (이미지 왼쪽, 텍스트 오른쪽) */
+.section:nth-child(odd) {
+    flex-direction: row;
+    background-color: #ffffff;
+}
+
+/* 짝수 섹션: 순서 반전 (텍스트 왼쪽, 이미지 오른쪽) */
+.section:nth-child(even) {
+    flex-direction: row-reverse;
+    background-color: #f5f5f5;
+}
+
+.section .image,
+.section .text {
+    flex: 1;
+    padding: 1rem;
+}
+
+.section .image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+.section .text {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section:nth-child(even) {
+        flex-direction: column;
+    }
+}
