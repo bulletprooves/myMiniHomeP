@@ -13,7 +13,7 @@ body {
     left: 0;
     width: 12rem;      /* 필요에 따라 조정 */
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.95); /* 약간 투명한 배경 */
+    background-color: rgba(18, 18, 18, 0.95); /* 약간 투명한 배경 */
     overflow-y: auto;  /* 세로 스크롤 허용 */
     padding: 1rem;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
@@ -115,7 +115,7 @@ body {
 
 .section .text {
     flex: 1;
-    padding: 1rem;
+    padding: 0rem 5rem;
 }
 
 .section .image img {
@@ -139,4 +139,34 @@ body {
     .section:nth-child(even) {
         flex-direction: column;
     }
+}
+
+@keyframes neon-flicker {
+    0% {
+        text-shadow: 
+        0 0 10px #ffffff,
+        0 0 20px #ffffff, 
+        0 0 30px #ffffff;
+    }
+    100% {
+        text-shadow: 
+        0 0 20px #ffffff, 
+        0 0 30px #ffffff, 
+        0 0 40px #ffffff;
+    }
+}
+.neon { 
+    font-size: 60px; 
+    font-weight: 700; 
+    color: #fff;
+    animation: neon-flicker 0.75s infinite alternate;
+}
+/*.neon_sub {
+    animation: neon-flicker 0.75s infinite alternate;
+}*/
+.highlight {
+    background: linear-gradient(#ffea0073 0 100%);
+    background-position: 0 calc(100% - 2px);
+    background-size: 100% 14px;
+    background-repeat: no-repeat;
 }
