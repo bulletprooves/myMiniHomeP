@@ -65,10 +65,10 @@ footer {
 /* 좌측 사이드바 고정 */
 .sidebar {
     position: fixed;   /* 스크롤해도 고정 */
-    top: 0;
+    top: 7rem; /* 네비게이션 높이만큼 내려줌 */
     left: 0;
     width: 6.5rem;      /* 필요에 따라 조정 */
-    height: 100%;
+    height: calc(100% - 7rem); /* 상단 공간을 제외하고 높이 설정 */
     background-color: rgba(255, 255, 255, 0.025); /* 약간 투명한 배경 */
     overflow-y: auto;  /* 세로 스크롤 허용 */
     padding: 1rem;
