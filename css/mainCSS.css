@@ -669,7 +669,7 @@ footer {
     transform: translateY(-7px); /* 살짝 위로 올라오는 효과 */
     box-shadow: 0 32px 48px #d6ffbe; /* 더 강한 그림자 */
 }
-/* Green 프로젝트 카드 */
+/* John 프로젝트 카드 */
 .project_John {
     width: 20rem;
     height: 26rem;
@@ -684,7 +684,21 @@ footer {
     transform: translateY(-7px); /* 살짝 위로 올라오는 효과 */
     box-shadow: 0 32px 48px #f3cfff; /* 더 강한 그림자 */
 }
-
+/* Gun 프로젝트 카드 */
+.project_Gun {
+    width: 20rem;
+    height: 26rem;
+    padding: 1rem;
+    text-align: center;
+    background-color: #ffebcf; /* 카드 배경색 */
+    border-radius: 8px;
+    box-shadow: 0 16px 24px #ffcd82; /* 카드 그림자 */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* 호버 효과 */
+}
+.project_Gun:hover {
+    transform: translateY(-7px); /* 살짝 위로 올라오는 효과 */
+    box-shadow: 0 32px 48px #ffebcf; /* 더 강한 그림자 */
+}
 
 
 
