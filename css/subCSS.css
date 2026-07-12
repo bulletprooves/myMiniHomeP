@@ -46,6 +46,11 @@ body {
     transform: scale(1.05);
   }  
 
+  .sidebar a.active img {
+    outline: 2px solid #ffffff;
+    opacity: 1;
+  }
+
 .page-header {
     /* 배경 이미지 경로 */
     background-size: cover;
@@ -134,16 +139,6 @@ body {
 .section .text {
     flex: 1;
     padding: 0rem 5rem;
-}
-
-.section .image img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    display: block;
-}
-
-.section .text {
     font-size: 1.1rem;
     color: #333;
 }
