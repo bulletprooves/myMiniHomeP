@@ -29,6 +29,159 @@ body {
     color: #1c1c1c;
 }
 
+
+/* ─────────────────────────────────────────
+   새 프로젝트 플레이 영역
+───────────────────────────────────────── */
+
+.featured-project {
+    width: min(90%, 75rem);
+    margin: 4rem auto 2rem;
+    padding: 1.5rem;
+
+    display: flex;
+    align-items: stretch;
+    gap: 2rem;
+
+    color: #1c1c1c;
+    background-color: rgba(255, 255, 255, 0.92);
+
+    border-radius: 18px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+
+    overflow: hidden;
+}
+
+/* GIF 영역 */
+.featured-project-preview {
+    flex: 2;
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.featured-project-preview img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 22rem;
+
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.featured-project:hover .featured-project-preview img {
+    transform: scale(1.025);
+}
+
+/* 프로젝트 설명 및 버튼 영역 */
+.featured-project-info {
+    flex: 1;
+    min-width: 16rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 2rem;
+    text-align: center;
+}
+
+.featured-project-label {
+    display: inline-block;
+    margin-bottom: 0.8rem;
+    padding: 0.35rem 0.9rem;
+
+    color: #ffffff;
+    background-color: #ff4b67;
+
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.08rem;
+}
+
+.featured-project-info h2 {
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
+}
+
+.featured-project-info p {
+    margin-bottom: 2rem;
+    color: #555555;
+    line-height: 1.8;
+}
+
+/* 플레이 버튼 */
+.featured-project-play {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 12rem;
+    padding: 1rem 2rem;
+
+    color: #ffffff;
+    background-color: #222222;
+
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 800;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.featured-project-play:hover {
+    color: #ffffff;
+    background-color: #ff4b67;
+
+    transform: translateY(-4px);
+    box-shadow: 0 14px 28px rgba(255, 75, 103, 0.4);
+}
+
+.featured-project-play:active {
+    transform: translateY(-1px);
+}
+
+.featured-project-play:focus-visible {
+    outline: 4px solid rgba(255, 75, 103, 0.4);
+    outline-offset: 4px;
+}
+
+/* 모바일 및 태블릿 */
+@media (max-width: 900px) {
+    .featured-project {
+        width: calc(100% - 2rem);
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .featured-project-preview img {
+        min-height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    .featured-project-info {
+        min-width: 0;
+        padding: 2rem 1rem;
+    }
+
+    .featured-project-info h2 {
+        font-size: 1.8rem;
+    }
+
+    .featured-project-play {
+        width: min(100%, 20rem);
+    }
+}
+
+
 /**** 푸터, 추가 정보 기입 ****/
 footer {
     background-color: #333333;
