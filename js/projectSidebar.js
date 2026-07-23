@@ -1,6 +1,6 @@
-const projectSidebarItems = [
+﻿const projectSidebarItems = [
   {
-    href: "myPortfolio.html",
+    href: "../index.html",
     src: "../images/subPages/homeButton.png",
     alt: "Home",
   },

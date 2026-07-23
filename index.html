@@ -1,21 +1,432 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
+<!-- 
+죽어 임마! ୧(๑•̀ᗝ•́)૭
+
+* GIF files must 25mb 보다 작아야 함. (깃헙데탑으로 하면 초과해도 괜찮음)
+* 요소 순서랑 UI 배치 재검토해야 함.
+* 각각의 프로젝트 html 파일 이동하는 걸로.
+* CSS 스타일 시트 파일 나눠야 함.
+* 요소 업로드 시간 3분 정도 걸림.
+* 프로젝트 추가할 때 아래 요소도 확인
+** 각각의 서브페이지 슬라이드바 추가
+** 
+-->
+
 <head>
     <meta charset="UTF-8">
-
-    <title>Bullet Prooves</title>
-
-    <meta http-equiv="refresh" content="0; url=html/myPortfolio.html">
-
-    <script>
-        window.location.replace("html/myPortfolio.html");
-    </script>
+    <meta name="viewport" content="width=1280">
+    <link rel="stylesheet" href="css/mainCSS.css">
+    <script src="js/sidebarToggle.js" defer></script>
+    <title>동근, he's ready for company</title>
 </head>
 
 <body>
-    <p>
-        홈페이지로 이동하고 있습니다.
-        <a href="html/myPortfolio.html">이동하기</a>
-    </p>
+
+    <!-- 페이지 헤더 : 동근, 게임 개발자 -->
+
+    <header>
+    </header>
+
+
+
+
+    <main>
+        <!-- 네비게이션 바로가기 -->
+        <section class="nav">
+            <!--a href="#about">Who Am I</a-->
+            <a href="#projects">🕹️Projects</a>
+            <a href="#contact">🖐️About Me</a>
+            <a href="#gallery">🖼️Gallery</a>
+            <a href="#asmr">📽️YouTube</a>
+        </section>
+
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="https://www.youtube.com/@bulletprooves" target="_blank">
+                        <img src="images/icons/icon_youtube.png" alt="YouTube">
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://bulletprooves.tistory.com/" target='_blank'>
+                        <img src="images/icons/icon_blog.png" alt="Blog">
+                    </a>
+                </li>
+                <li>
+                    <a href="html/project_FOAS.html">
+                        <img src="images/FOAS_jpg.jpg" alt="FOAS">
+                    </a>
+                </li>
+                <li>
+                    <a href="html/project_RZ.html">
+                        <img src="images/RZ_jpg.jpg" alt="Rainforcement : Zombies">
+                    </a>
+                </li>
+                <li>
+                    <a href="html/project_Astro.html">
+                        <img src="images/Astro_jpg.jpg" alt="Astro">
+                    </a>
+                </li>
+                <li>
+                    <a href="html/project_SMWYCD.html">
+                        <img src="images/SMWYCD_jpg.jpg" alt="SMWYCD">
+                    </a>
+                </li>
+                <li>
+                    <a href="html/project_Green.html">
+                        <img src="images/Green_jpg.jpg" alt="Green">
+                    </a>
+                </li>
+                <li>
+                    <a href="html/project_John.html">
+                        <img src="images/John_jpg.jpg" alt="John">
+                    </a>
+                </li>
+                <li>
+                    <a href="html/project_Gun.html">
+                        <img src="images/Gun_jpg.jpg" alt="John">
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        
+
+        <section id="projects" class="bg bg_projects container">
+            <p class="text_center text_white padding_5"><span class="text_huge_shadow">Projects</span></p>
+            <p class="text_center text_white text_shadow semi_accent">카드를 누르면 프로젝트의 자세한 설명을 확인하거나 플레이 하실 수 있습니다!</p>
+            <p class="text_center text_white text_shadow semi_accent">(태블릿에서는 아래 메뉴가 올바르게 나타나지 않을 수도 있습니다.)</p>
+
+            <!-- 새 프로젝트 플레이 영역 -->
+            <article class="featured-project">
+                <div class="featured-project-preview">
+                    <img src="projects/donggurami/Build/Donggurami-WebGL-Build.jpg" alt="Donggurami 게임 플레이 화면" loading="lazy" decoding="async">
+                </div>
+
+                <div class="featured-project-info">
+                    <span class="featured-project-label">NEW PROJECT</span>
+
+                    <h2>Donggurami</h2>
+
+                    <p>
+                        궤도 위에 노트블록을 배치하여<br>
+                        나만의 음악을 만드는 리듬 게임 샌드박스입니다.
+                    </p>
+
+                    <a href="projects/donggurami/" class="featured-project-play" target="_blank" rel="noopener noreferrer">
+                        ▶ 플레이하기
+                    </a>
+                </div>
+            </article>
+
+            <div class="projects">
+
+                <div class="project_FOAS">
+                    <a href="html/project_FOAS.html">
+                        <img src="images/FOAS_jpg.jpg" alt="FOAS">
+                        <h3>FOAS</h3>
+                        <p><b>#머신러닝 #AI #캡스톤</b><br>
+                            (Far Out At Sea)<br>
+                            동료를 모아 드넓은 바다로 떠나는 모험 이야기<br>                      
+                        </p>
+                    </a>
+                </div>
+                <div class="project_RZ">
+                    <a href="html/project_RZ.html">
+                        <img src="images/RZ_jpg.jpg" alt="Reinforcement : Zombies">
+                        <h3>Reinforcement : Zombies</h3>
+                        <p><b>#Google Play Store</b><br>
+                            모바일 좀비 캐주얼 게임<br>
+                        </p>
+                    </a>
+                </div>
+                <div class="project_Astro">
+                    <a href="html/project_Astro.html">
+                        <img src="images/Astro_jpg.jpg" alt="Astro">
+                        <h3>Astronaut Platformer</h3>
+                        <p>긴급신호를 받고 출동한 우주 순찰 요원이<br>
+                            마주한 끔직한 진실, 어떻게 헤쳐나갈 것인가?</p>
+                    </a>
+                </div>
+                <div class="project_SMWYCD">
+                    <a href="html/project_SMWYCD.html">
+                        <img src="images/SMWYCD_jpg.jpg" alt="SMWYCD">
+                        <h3>SMWYCD</h3>
+                        <p><b>#Unity3D #Csharp</b><br>
+                            (Show Me What You Can Do)<br>
+                            비윤리적 생체 실험에 소모품이된<br>
+                            주인공의 FPS 액션 복수</p>
+                    </a>
+                </div>
+                <div class="project_Green">
+                    <a href="html/project_Green.html">
+                        <img src="images/Green_jpg.jpg" alt="Green">
+                        <h3>Green Effect</h3>
+                        <p><b>#공모전 #환경보호</b><br>
+                            환경보존 모바일 미니게임!<br>
+                            우리가 버린 쓰레기들의 나비효과</p>
+                    </a>
+                </div>
+                <div class="project_John">
+                    <a href="html/project_John.html">
+                        <img src="images/John_jpg.jpg" alt="John">
+                        <h3>John Week</h3>
+                        <p><b>#팬게임 #JohnWick</b><br>
+                            영화 감상 후, 영감 받아 만든 액션 게임
+                        </p>
+                    </a>
+                </div>
+                <div class="project_Gun">
+                    <a href="html/project_Gun.html">
+                        <img src="images/Gun_jpg.jpg" alt="gun">
+                        <h3>I Got a GUN</h3>
+                        <p><b>#다함께 #AndroidStudio</b><br>
+                            실제 총기를 사용하지 않아<br>
+                            안전한 총 게임!<br>
+                            러시안 룰렛, 퀵-드로우
+                        </p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="bg bg_header">
+            <div class="container-header">
+                <h1>“ 작지만<span class="accent"> 선명한 재미</span>, 기억에 <span class="accent">오래 남을</span> 경험을
+                        개발하는 <span class="accent">게임 개발자</span>입니다. <span class="accent">”</span>
+                </h1>
+                <h3>함께 웃고 즐길 소소한 <span class="semi_accent">추억</span>이 담긴 게임을 개발 하고픈 <span
+                        class="semi_accent">동근(David)</span> 입니다.</h3>
+                <!--p><span class="semi_accent">Hi, There!</span> I'm 동근 who wanna make games that will be
+                    <span class="semi_accent">a precious memory</span> for everybody!
+                </p--> <!-- for both developers and players. -->
+            </div>
+        </section>
+        <!--h1>동근 (David_동근)</h1>
+        <h3>Game Developer</h3-->
+
+        <section id="contact" class="bg bg_contact">
+            <p class="text_center text_white"><span class="text_huge_shadow">Hello!</span></p>
+            <div class="contact-sections">
+                <!-- 첫 번째 왼쪽 카드 -->
+                <div class="contact-section">
+                    <h3 class="text_center">About Me</h3>
+                    <div class="about-content">
+                        <img src="images/me_YongAn.jpeg" alt="My Photo" class="profile-photo">
+                        <ul class="contact-list">
+                            <li>
+                                <h3><strong>게임 개발자 / 프로그래머</strong>
+                                    <span class="highlight">Gam(David)동근</span>
+                                </h3>
+                            </li>
+                            <!--li>종이에 그린 검과 용사, 괴물을 오려내어 ✂️ 방바닥을</li-->
+                            <!--li>배경 삼아 전투를 펼치던 아이가 꿈을 갖고 자랐습니다.✨</li-->
+                            <li>안녕하세요! </li>
+                            <li>게임의 핵심 재미를 설계하고 구현하는 프로그래머입니다.</li>
+                            <li>서브컬쳐 모바일 게임 회사에서 도감, 상점, 캐릭터 능력치 등</li>
+                            <li>아웃게임 UI를 구현하며 데이터 흐름과 구조, 사용자 경험을</li>
+                            <li>함께 고려한 프로그래밍 작업 경험을 쌓았습니다.</li>
+                            <li>실력 향상을 위한 서브 프로젝트를 개발하고 유튜브를 운영하는 등</li>
+                            <li>특별한 시도를 이어가며 개발에 힘쓰고 있습니다.</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 두 번째 오른쪽 카드 -->
+                <div class="contact-section">
+                    <h3 class="text_center">Contact</h3>
+                    <div class="about-content">
+                        <ul class="contact-list">
+                            <li>
+                                <img src="images/icons/icon_email.png" alt="Email Icon" class="icon">
+                                <strong>Email:</strong>
+                                <a href="mailto:dongun1115@gmail.com">dongun1115@gmail.com</a>
+                            </li>
+                            <li>
+                                <img src="images/icons/icon_tel.png" alt="Tel Icon" class="icon">
+                                <strong>Phone:</strong> <a href="tel:+821055765234">+82 10-5576-5234</a>
+                            </li>
+                            <li>
+                                <img src="images/icons/icon_linkedin.png" alt="Linked Icon" class="icon">
+                                <strong>Linkedin:</strong>
+                                <a href="https://www.linkedin.com/in/donggeun-gam-353a69339/" target="_blank">
+                                    https://www.linkedin.com/in/donggeun-gam</a>
+                            </li>
+                            <li>
+                                <img src="images/icons/icon_github.png" alt="GitHub Icon" class="icon">
+                                <strong>GitHub:</strong> <a href="https://github.com/bulletprooves"
+                                    target="_blank">github.com/bulletprooves</a>
+                            </li>
+                            <li>
+                                <img src="images/icons/icon_blog.png" alt="Blog Icon" class="icon">
+                                <strong>Blog:</strong> <a
+                                    href="https://bulletprooves.tistory.com/" target='_blank'>bulletprooves.tistory.com/</a>
+                            </li>
+                            <li>
+                                <img src="images/icons/icon_youtube.png" alt="YouTube Icon" class="icon">
+                                <strong>YouTube:</strong> <a
+                                    href="https://www.youtube.com/@bulletprooves" target='_blank'>youtube.com/@bulletprooves</a>
+                            </li>
+                        </ul>
+                        <ul>
+							<li>모바일 게임 개발사 <span class="highlight">클라이언트 프로그래머</span> 경력</li>
+                            <li><span class="highlight">Unity</span>, Blender3D, GitHub, Notion 등을 활용</li>
+                            <li>개발에 사용하는 주력 <span class="highlight">언어는 C#</span></li>
+                            <li>Google PlayStore에 개인프로젝트 <span class="highlight">출시한 경험</span></li>
+                            <li>로우-폴리 3D 디자인, YouTube 개인 프로젝트 <span class="highlight">컨텐츠, 기획</span> 능력</li>
+                        </ul>
+                        <p style="color: rgb(86, 86, 86);">자세한 사항은 자기소개서 및 이력서를 확인하여주십시오.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="bg">
+            <p class="text_center text_white"><span class="big_accent neon">작품 갤러리</span>
+            </p>
+            <p class="text_center text_white accent text_shadow">
+                <span class="mid_accent">🖱️</span> 사진 위로 마우스를 올려보세요!
+            </p>
+            <p class="text_center text_white accent text_shadow">
+                <span class="mid_accent">👆</span> (모바일은 사진을 터치해주세요.)
+            </p>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="images/FOAS_jpg.jpg" alt="Image 1" class="static-image">
+                    <img src="gifs/FOAS_gif.gif" alt="Image 1 Animated" class="hover-image">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Astro_jpg.jpg" alt="Image 2" class="static-image">
+                    <img src="gifs/Astro_gif.gif" alt="Image 2 Animated" class="hover-image">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Green_jpg.jpg" alt="Image 3" class="static-image">
+                    <img src="gifs/Green_gif.gif" alt="Image 3 Animated" class="hover-image">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/SMWYCD_jpg.jpg" alt="Image 4" class="static-image">
+                    <img src="gifs/SMWYCD_gif.gif" alt="Image 4 Animated" class="hover-image">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/RZ_jpg.jpg" alt="Image 5" class="static-image">
+                    <img src="gifs/RZ_gif.gif" alt="Image 5 Animated" class="hover-image">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/John_jpg.jpg" alt="Image 6" class="static-image">
+                    <img src="gifs/John_gif.gif" alt="Image 6 Animated" class="hover-image">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="video_header">
+                <iframe src="https://www.youtube.com/embed/saJHvceRk5E?autoplay=1&mute=1&loop=1&playlist=saJHvceRk5E"
+                    allowfullscreen>
+                </iframe>
+                <div class="scroll_hint">
+                    <span class="scroll_hint_animation">아래로 스크롤</span>
+                    <p class="arrow">&gt;&gt;&gt;</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <p class="bg_black2 text_center text_white"><span class="text_huge_shadow">YouTube</span></p>
+            <a href="https://www.youtube.com/@bulletprooves">
+                <img src="images/youtubeHead.jpg" alt="유튭" style="width: 100%; height: auto; display: block;">
+                <!-- 아래쪽 여백 없애 -->
+            </a>
+        </section>
+
+        <div class="containerYT">
+            <!-- 좌측: 펄스 버튼 -->
+            <div class="left">
+                <a href="https://www.youtube.com/@bulletprooves" class="pulse-button"><span class="accent">동근
+                            유튜브 채널 바로가기</span>
+                </a>
+            </div>
+
+            <!-- 우측: 슬라이더 -->
+            <div class="right">
+                <div class="slider">
+                    <div class="slide-track">
+                        <!-- 슬라이드 아이템 1 -->
+                        <div class="slide">
+                            <img src="https://img.youtube.com/vi/8Xc3Q5ubBh0/0.jpg" alt="Video 1">
+                            <p>Astronaut Platformer</p>
+                        </div>
+                        <!-- 슬라이드 아이템 2 -->
+                        <div class="slide">
+                            <img src="https://img.youtube.com/vi/saJHvceRk5E/0.jpg" alt="Video 2">
+                            <p>Rainforcement : Zombies</p>
+                        </div>
+                        <!-- 슬라이드 아이템 3 -->
+                        <div class="slide">
+                            <img src="https://img.youtube.com/vi/MCHql0k2D9I/0.jpg" alt="Video 3">
+                            <p>왜 또 칭얼거려</p>
+                        </div>
+                        <!-- 슬라이드 아이템 4 -->
+                        <div class="slide">
+                            <img src="https://img.youtube.com/vi/pXfo1DTW-Jg/0.jpg" alt="Video 4">
+                            <p>DAVid DEV</p>
+                        </div>
+                        <!-- 추가 슬라이드 아이템... -->
+
+                        <!-- 반복 효과를 위해 복제 (원활한 루프를 위함) -->
+                        <div class="slide">
+                            <img src="https://img.youtube.com/vi/8Xc3Q5ubBh0/0.jpg" alt="Video 1">
+                            <p>Astronaut Platformer</p>
+                        </div>
+                        <div class="slide">
+                            <img src="https://img.youtube.com/vi/saJHvceRk5E/0.jpg" alt="Video 2">
+                            <p>Rainforcement : Zombies</p>
+                        </div>
+                        <div class="slide">
+                            <img src="https://img.youtube.com/vi/MCHql0k2D9I/0.jpg" alt="Video 3">
+                            <p>왜 또 칭얼거려</p>
+                        </div>
+                        <!-- 슬라이드 아이템 4 -->
+                        <div class="slide">
+                            <img src="https://img.youtube.com/vi/pXfo1DTW-Jg/0.jpg" alt="Video 4">
+                            <p>DAVid DEV</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <section id="asmr">
+            <div class="video-container">
+                <div class="video-bg" style="padding-bottom: 20rem;">
+                    <iframe
+                        src="https://www.youtube.com/embed/-q6-DGulbnk?autoplay=1&mute=1&loop=1&playlist=-q6-DGulbnk"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <p class="video-caption">편하게 감상하실 수 있도록 직접 만든 ASMR 영상을 준비했어요.
+                    <br>( 볼륨을 올려 따뜻한 모닥불 소리를 들을 수 있답니다. )
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Donggeun Gam. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
+
 </html>

@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding-left: 14rem;
     line-height: 1.6;
+    transition: padding-left 0.25s ease;
 }
 
 /* 좌측 사이드바 고정 */
@@ -13,11 +14,45 @@ body {
     left: 0;
     width: 8rem;      /* 필요에 따라 조정 */
     height: 100%;
-    background-color: rgba(18, 18, 18, 0.95); /* 약간 투명한 배경 */
+    background-color: rgba(18, 18, 18, 0.1); /* 약간 투명한 배경 */
     overflow-y: auto;  /* 세로 스크롤 허용 */
     padding: 1rem;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+    transition: transform 0.25s ease;
+  }
+
+  .sidebar-toggle {
+    position: fixed;
+    top: 1rem;
+    left: 10.5rem;
+    width: 4rem;
+    height: 4rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #111111;
+    cursor: pointer;
+    font-size: 3rem;
+    font-weight: 800;
+    z-index: 1100;
+    transition: left 0.25s ease, background-color 0.2s ease;
+  }
+
+  .sidebar-toggle:hover {
+    background-color: #dddddd;
+  }
+
+  body.sidebar-collapsed {
+    padding-left: 0;
+  }
+
+  body.sidebar-collapsed .sidebar {
+    transform: translateX(-100%);
+  }
+
+  body.sidebar-collapsed .sidebar-toggle {
+    left: 0.75rem;
   }
   
   .sidebar ul {
