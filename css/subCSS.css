@@ -1,220 +1,452 @@
-/* 기본 스타일 */
-body {
-    font-family: Arial, sans-serif;
+:root {
+    color-scheme: light;
+    --bg: #f5f7fb;
+    --surface: #ffffff;
+    --surface-soft: #eef2f7;
+    --line: rgba(15, 23, 42, 0.12);
+    --text: #111827;
+    --text-soft: #626b7d;
+    --primary: #6f5af5;
+    --cyan: #087f9f;
+    --header-accent: #74e3ff;
+    --sidebar-bg: rgba(255, 255, 255, 0.9);
+    --button-primary-bg: #111827;
+    --button-primary-text: #ffffff;
+    --footer-text: #687286;
+    --radius-sm: 12px;
+    --radius-md: 22px;
+    --radius-lg: 34px;
+}
+
+html[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #070911;
+    --surface: #111625;
+    --surface-soft: #171d2e;
+    --line: rgba(255, 255, 255, 0.1);
+    --text: #f6f7fb;
+    --text-soft: #a8b0c2;
+    --primary: #8b7cff;
+    --cyan: #59dcff;
+    --header-accent: #59dcff;
+    --sidebar-bg: rgba(8, 11, 19, 0.92);
+    --button-primary-bg: #f6f7fb;
+    --button-primary-text: #080a12;
+    --footer-text: #71798b;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
     margin: 0;
-    padding-left: 14rem;
-    line-height: 1.6;
+    padding: 0;
+}
+
+html {
+    background: var(--bg);
+}
+
+body {
+    min-width: 320px;
+    padding-left: 9.5rem;
+    overflow-x: hidden;
+    background:
+        radial-gradient(circle at 80% 10%, rgba(139, 124, 255, 0.1), transparent 28rem),
+        var(--bg);
+    color: var(--text);
+    font-family: Inter, Pretendard, "Noto Sans KR", "Apple SD Gothic Neo", system-ui, sans-serif;
+    line-height: 1.65;
+    word-break: keep-all;
     transition: padding-left 0.25s ease;
 }
 
-/* 좌측 사이드바 고정 */
-.sidebar {
-    position: fixed;   /* 스크롤해도 고정 */
-    top: 0;
-    left: 0;
-    width: 8rem;      /* 필요에 따라 조정 */
-    height: 100%;
-    background-color: rgba(18, 18, 18, 0.1); /* 약간 투명한 배경 */
-    overflow-y: auto;  /* 세로 스크롤 허용 */
-    padding: 1rem;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    transition: transform 0.25s ease;
-  }
+img {
+    display: block;
+    max-width: 100%;
+}
 
-  .sidebar-toggle {
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    width: 8.25rem;
+    padding: 0.75rem;
+    overflow-y: auto;
+    border-right: 1px solid var(--line);
+    background: var(--sidebar-bg);
+    backdrop-filter: blur(18px);
+    transition: transform 0.25s ease;
+}
+
+.sidebar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    list-style: none;
+}
+
+.sidebar a {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border: 1px solid transparent;
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+    transition: border-color 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+}
+
+.sidebar a:hover,
+.sidebar a:focus-visible {
+    border-color: rgba(89, 220, 255, 0.65);
+    outline: none;
+    transform: translateX(0.2rem);
+}
+
+.sidebar a.active {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(139, 124, 255, 0.18);
+}
+
+.sidebar img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    opacity: 0.72;
+    transition: opacity 0.2s ease, transform 0.3s ease;
+}
+
+.sidebar a:hover img,
+.sidebar a:focus-visible img,
+.sidebar a.active img {
+    opacity: 1;
+    transform: scale(1.035);
+}
+
+.sidebar-toggle {
     position: fixed;
     top: 1rem;
-    left: 10.5rem;
-    width: 4rem;
-    height: 4rem;
-    border: none;
-    border-radius: 4px;
-    background-color: #ffffff;
-    color: #111111;
-    cursor: pointer;
-    font-size: 3rem;
-    font-weight: 800;
+    left: 8rem;
     z-index: 1100;
-    transition: left 0.25s ease, background-color 0.2s ease;
-  }
+    width: 2.8rem;
+    height: 2.8rem;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    background: var(--button-primary-bg);
+    color: var(--button-primary-text);
+    cursor: pointer;
+    font-size: 1.25rem;
+    font-weight: 900;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+    transition: left 0.25s ease, transform 0.2s ease, background-color 0.2s ease;
+}
 
-  .sidebar-toggle:hover {
-    background-color: #dddddd;
-  }
-
-  body.sidebar-collapsed {
-    padding-left: 0;
-  }
-
-  body.sidebar-collapsed .sidebar {
-    transform: translateX(-100%);
-  }
-
-  body.sidebar-collapsed .sidebar-toggle {
-    left: 0.75rem;
-  }
-  
-  .sidebar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .sidebar li {
-    margin-bottom: 1rem;
-  }
-  
-  .sidebar a {
-    display: block;
-  }
-  
-  .sidebar img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 4px;
-    transition: transform 0.2s ease;
-  }
-  
-  .sidebar img:hover {
+.sidebar-toggle:hover,
+.sidebar-toggle:focus-visible {
+    background: var(--cyan);
+    outline: none;
     transform: scale(1.05);
-  }  
+}
 
-  .sidebar a.active img {
-    outline: 2px solid #ffffff;
-    opacity: 1;
-  }
+.theme-toggle {
+    width: 2.8rem;
+    height: 2.8rem;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    background: var(--surface);
+    color: var(--text);
+    cursor: pointer;
+    font: inherit;
+    font-size: 1.15rem;
+    line-height: 1;
+    box-shadow: 0 10px 28px rgba(31, 41, 55, 0.16);
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.theme-toggle-floating {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1200;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+    border-color: var(--primary);
+    background: var(--surface-soft);
+    outline: none;
+    transform: rotate(8deg) scale(1.04);
+}
+
+body.sidebar-collapsed {
+    padding-left: 0;
+}
+
+body.sidebar-collapsed .sidebar {
+    transform: translateX(-100%);
+}
+
+body.sidebar-collapsed .sidebar-toggle {
+    left: 0.75rem;
+}
 
 .page-header {
-    /* 배경 이미지 경로 */
-    background-size: cover;
-    /* 이미지가 영역 전체를 덮도록 */
+    position: relative;
+    min-height: 58svh;
+    padding: 4rem 2rem;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
     background-position: center;
-    /* 중앙 정렬 */
-    height: 400px;
-    /* 헤더 영역의 높이 (필요에 따라 조정) */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    /* 텍스트가 잘 보이도록 흰색 */
-    text-align: center;
+    background-size: cover;
+    isolation: isolate;
 }
 
 .page-header::before {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(180deg, rgba(5, 7, 13, 0.28), rgba(5, 7, 13, 0.9)),
+        linear-gradient(120deg, rgba(139, 124, 255, 0.28), transparent 55%);
     content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 400px;
-    background-color: rgba(0, 0, 0, 0.6); /* 검은색 오버레이, 0.4는 투명도 (조절 가능) */
-    z-index: 1;
-  }
-  
-  .header-content {
-    position: relative;
-    z-index: 2; /* 오버레이 위에 텍스트가 보이도록 */
-    text-align: center;
-    padding-top: 2rem;
-  }
+}
 
-.video-container {
+.header-content {
+    max-width: 58rem;
     text-align: center;
-    margin: 0 0;
-    background: #000;
 }
-.video-bg {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    max-width: 100rem; /* 비디오 최대 너비 설정 */
-    height: 100%;
-    max-height: 50rem;
-    margin: 0 auto;
-    padding-bottom: 43.75%;/*43.75%; = 4:3, 56.25%; = 16:9 비율 유지 */
+
+.header-content::before {
+    margin-bottom: 1.1rem;
+    display: inline-block;
+    color: var(--header-accent);
+    content: "PROJECT CASE STUDY";
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
 }
-.video-bg iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
+
+.neon {
+    color: #fff;
+    font-size: clamp(3rem, 7vw, 6.5rem);
+    line-height: 1;
+    letter-spacing: -0.065em;
+    text-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
 }
 
 .section {
-    display: flex;
+    width: min(calc(100% - 3rem), 72rem);
+    margin: 1.35rem auto;
+    padding: clamp(1.2rem, 3vw, 2rem);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     align-items: center;
-    justify-content: center;
-    padding: 4rem 2rem;
+    gap: clamp(1.5rem, 4vw, 3.5rem);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    background: var(--surface);
+    box-shadow: 0 18px 48px rgba(0, 0, 0, 0.2);
 }
 
-/* 홀수 섹션: 기본 (이미지 왼쪽, 텍스트 오른쪽) */
-.section:nth-child(odd) {
-    flex-direction: row;
-    background-color: #ffffff;
+main > .section:nth-of-type(even) {
+    background: var(--surface-soft);
 }
 
-/* 짝수 섹션: 순서 반전 (텍스트 왼쪽, 이미지 오른쪽) */
-.section:nth-child(even) {
-    flex-direction: row-reverse;
-    background-color: #f5f5f5;
+main > .section:nth-of-type(even) .image {
+    order: 2;
+}
+
+.section .image {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: calc(var(--radius-md) - 6px);
+    background: #080a10;
 }
 
 .section .image img {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
-    display: block;
-    box-shadow: 0px 0px 30px rgb(0, 0, 0); /* 그림자 추가 */
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.section:hover .image img {
+    transform: scale(1.018);
 }
 
 .section .text {
-    flex: 1;
-    padding: 0rem 5rem;
-    font-size: 1.1rem;
-    color: #333;
+    min-width: 0;
+    color: var(--text-soft);
 }
 
-@media (max-width: 768px) {
-    .section {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .section:nth-child(even) {
-        flex-direction: column;
-    }
+.section .text h2 {
+    margin-bottom: 0.9rem;
+    color: var(--text);
+    font-size: clamp(1.7rem, 3vw, 2.6rem);
+    line-height: 1.15;
+    letter-spacing: -0.04em;
 }
 
-@keyframes neon-flicker {
-    0% {
-        text-shadow: 
-        0 0 10px #ffffff,
-        0 0 20px #ffffff, 
-        0 0 30px #ffffff;
-    }
-    100% {
-        text-shadow: 
-        0 0 20px #ffffff, 
-        0 0 30px #ffffff, 
-        0 0 40px #ffffff;
-    }
+.section .text p {
+    font-size: 0.98rem;
 }
-.neon { 
-    font-size: 60px; 
-    font-weight: 700; 
-    color: #fff;
-    animation: neon-flicker 0.75s infinite alternate;
-}
-/*.neon_sub {
-    animation: neon-flicker 0.75s infinite alternate;
-}*/
+
 .highlight {
-    background: linear-gradient(#ffea0073 0 100%);
-    background-position: 0 calc(100% - 2px);
-    background-size: 100% 14px;
-    background-repeat: no-repeat;
+    position: relative;
+    display: inline;
+    background: linear-gradient(transparent 70%, rgba(89, 220, 255, 0.28) 0);
+}
+
+.video-container {
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: calc(var(--radius-md) - 6px);
+    background: #000;
+}
+
+.video-bg {
+    position: relative;
+    width: 100%;
+    padding-bottom: 0 !important;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+.video-bg iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+main::after {
+    width: min(calc(100% - 3rem), 72rem);
+    margin: 4rem auto 0;
+    padding: 2rem 0 3rem;
+    display: block;
+    border-top: 1px solid var(--line);
+    color: var(--footer-text);
+    content: "DONGGEUN BUILDS WORLDS · GAME DEVELOPMENT PORTFOLIO";
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-align: center;
+}
+
+@media (max-width: 920px) {
+    body {
+        padding-left: 7.5rem;
+    }
+
+    .sidebar {
+        width: 6.5rem;
+    }
+
+    .sidebar-toggle {
+        left: 6.15rem;
+    }
+}
+
+@media (max-width: 720px) {
+    body,
+    body.sidebar-collapsed {
+        padding-left: 0;
+        padding-bottom: 5.6rem;
+    }
+
+    .sidebar {
+        top: auto;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 5.15rem;
+        padding: 0.55rem;
+        overflow-x: auto;
+        overflow-y: hidden;
+        border-top: 1px solid var(--line);
+        border-right: 0;
+    }
+
+    .sidebar ul {
+        width: max-content;
+        min-width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.45rem;
+    }
+
+    .sidebar a {
+        width: 4.8rem;
+    }
+
+    .sidebar a:hover,
+    .sidebar a:focus-visible {
+        transform: translateY(-0.12rem);
+    }
+
+    .sidebar-toggle,
+    body.sidebar-collapsed .sidebar-toggle {
+        top: auto;
+        bottom: 5.75rem;
+        left: 0.8rem;
+    }
+
+    .theme-toggle-floating {
+        top: 0.8rem;
+        right: 0.8rem;
+    }
+
+    body.sidebar-collapsed .sidebar {
+        transform: translateY(110%);
+    }
+
+    .page-header {
+        min-height: 48svh;
+        padding: 4rem 1.25rem;
+        border-radius: 0 0 var(--radius-md) var(--radius-md);
+    }
+
+    .section,
+    main > .section:nth-of-type(even) {
+        width: calc(100% - 1.5rem);
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    main > .section:nth-of-type(even) .image {
+        order: 0;
+    }
+
+    .section .text {
+        padding: 0.35rem;
+    }
+
+    main::after {
+        width: calc(100% - 1.5rem);
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }
