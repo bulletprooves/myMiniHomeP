@@ -27,6 +27,34 @@
     return nextTheme;
   }
 
+  function getWhiteIconSrc(src) {
+    return src.replace(/(_white)?(\.[a-z0-9]+)$/i, "_white$2");
+  }
+
+  function getLightIconSrc(src) {
+    return src.replace(/_white(\.[a-z0-9]+)$/i, "$1");
+  }
+
+  function updateIcons(theme) {
+    var isDark = theme === "dark";
+    var icons = document.querySelectorAll('img[src*="images/icons/"]');
+
+    icons.forEach(function (icon) {
+      var currentSrc = icon.getAttribute("src");
+      var originalSrc = icon.dataset.lightIconSrc || getLightIconSrc(currentSrc);
+      var nextSrc = isDark ? getWhiteIconSrc(originalSrc) : originalSrc;
+
+      icon.dataset.lightIconSrc = originalSrc;
+      icon.onerror = isDark
+        ? function () {
+            icon.onerror = null;
+            icon.src = originalSrc;
+          }
+        : null;
+      icon.src = nextSrc;
+    });
+  }
+
   function updateButton(button, theme) {
     var isDark = theme === "dark";
     button.textContent = isDark ? "☀" : "☾";
@@ -44,10 +72,13 @@
     button.type = "button";
     button.className = "theme-toggle" + (nav ? "" : " theme-toggle-floating");
     updateButton(button, root.dataset.theme);
+    updateIcons(root.dataset.theme);
 
     button.addEventListener("click", function () {
       var nextTheme = root.dataset.theme === "dark" ? "light" : "dark";
-      updateButton(button, setTheme(nextTheme, true));
+      var appliedTheme = setTheme(nextTheme, true);
+      updateButton(button, appliedTheme);
+      updateIcons(appliedTheme);
     });
 
     (nav || document.body).appendChild(button);
